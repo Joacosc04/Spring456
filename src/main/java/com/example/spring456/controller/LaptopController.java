@@ -24,7 +24,7 @@ public class LaptopController {
     }
 
     @PostMapping("/api/laptops")
-    public void create(@RequestBody Laptop laptop){
-        laptopRepository.save(laptop);
+    public Laptop create(@RequestBody Laptop laptop){
+        return laptopRepository.save(laptop);
     }
 }
